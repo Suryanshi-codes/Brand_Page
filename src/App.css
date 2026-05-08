@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ================= NAV ================= */
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+}
+
+.logo img{
+  width: 80px;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  font-weight: 500;
+}
+
+button{
+  all: unset;
+  padding: 6px 16px;
+  background: red;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 72px);
+  gap: 40px;
+}
+
+/* LEFT SIDE */
+.hero-content{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+}
+
+.hero h1{
+  font-size: clamp(48px, 6vw, 108px);
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.hero p{
+  font-weight: 600;
+  color: #5A5959;
+  max-width: 400px;
+}
+
+/* BUTTONS */
+.hero-btn{
+  display: flex;
+  gap: 20px;
+}
+
+.secondary-btn{
+  background: transparent;
+  color: gray;
+  border: 1px solid gray;
+}
+
+/* SHOPPING SECTION */
+.shopping p{
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.brand-icons{
+  display: flex;
+  gap: 12px;
+}
+
+.brand-icons img{
+  width: 32px;
+}
+
+/* RIGHT SIDE IMAGE */
+.hero-image img{
+  width: min(500px, 45vw);
+  height: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px){
+
+  .hero{
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .hero-content{
+    align-items: center;
+  }
+
+  .hero p{
+    max-width: 90%;
+  }
+
+  .hero-btn{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .brand-icons{
+    justify-content: center;
+  }
+
+  .hero-image img{
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 600px){
+
+  nav{
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero h1{
+    font-size: 40px;
+  }
+
+  .hero-btn{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btn button{
+    width: 100%;
+  }
+
+  .brand-icons img{
+    width: 28px;
+  }
+}
+
